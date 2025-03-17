@@ -1,0 +1,162 @@
+.chatsection
+{
+    background-color: var(--background-color);
+    height: 100vh;
+    flex: 1;
+}
+.topsection
+{
+    width: 100%;
+    height: 75vh;
+    
+}
+.heading
+{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 2vmax;
+}
+.heading span:nth-child(1)
+{
+    font-size: 4em;
+    font-weight: 600;
+    background: linear-gradient(to right,rgb(222,19,101),rgb(89,190,215),white);
+    background-clip: text;
+    color: transparent;
+}
+.heading span:nth-child(2)
+{
+    font-size: 2.9em;
+    font-weight: 600;
+    background: linear-gradient(to right,rgb(19,198,222),rgb(212,31,107),white);
+    background-clip: text;
+    color: transparent;
+}
+.heading span:nth-child(3)
+{
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--color);
+    opacity: 0.8;
+}
+.bottomsection
+{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bottomsection input
+{
+    width: 50%;
+    height: 60px;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: var(--btn-background-color);
+    color: var(--btn-color);
+}
+#sendbtn
+{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: var(--btn-background-color);
+    border: none;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+#sendbtn svg
+{
+    width: 30px;
+    height: 30px;
+    color: var(--btn-color);
+}
+
+#sendbtn:hover{
+background-color: var( --hover-btn-background-color);
+}
+
+.userbox{
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+    align-items: start;
+    color: var(--color);
+}
+
+.aibox{
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+    align-items: start;
+    color: var(--color);
+}
+
+.aibox p
+{
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.result
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 40px 20px;
+    font-size: 20px;
+}
+
+.result img{
+    filter: drop-shadow(2px 2px 10px black);
+}
+
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.loader hr{
+    height: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: aliceblue;
+    background: linear-gradient(to right,rgb(142, 142, 229),var(--color),rgb(142, 142, 229));
+    background-size: 800px 50px;
+    animation: loader 3s linear infinite ;
+}
+
+@keyframes loader{
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
+}
+
+@media(max-width:700px)
+{
+  .heading
+  {
+    font-size: 1.5vmax;
+  }
+}
